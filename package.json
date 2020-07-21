@@ -1,0 +1,36 @@
+{
+  "name": "nyaapi-grpc",
+  "version": "1.0.0",
+  "description": "Nyaapi with GRPC interface",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "babel src -d lib",
+    "dev": "npm run build && node lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nyaapi",
+    "anime",
+    "weeb"
+  ],
+  "author": "ysanson",
+  "license": "ISC",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.5",
+    "grpc": "^1.24.3",
+    "nodemon": "^2.0.4",
+    "nyaapi": "^2.3.3"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.10.4",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}
