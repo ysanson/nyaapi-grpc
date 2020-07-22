@@ -2,11 +2,13 @@ env:
   browser: true
   es2020: true
 extends:
-  - standard
-parser: '@typescript-eslint/parser'
+  - google
 parserOptions:
   ecmaVersion: 11
   sourceType: module
-plugins:
-  - '@typescript-eslint'
-rules: {}
+rules: {
+  indent: ["error", 4],
+  max-len: [2, 150],
+  object-curly-spacing: [2, "always"],
+  linebreak-style: "off"
+}

@@ -1,12 +1,4 @@
-import grpc from 'grpc';
-import protoLoader from '@grpc/proto-loader';
-let PROTO_PATH = "NyaapiService.proto";
+import modules from 'modules';
+import utils from 'utils';
 
-var packageDefinition = protoLoader.loadSync(
-    PROTO_PATH,
-    {keepCase: true,
-     longs: String,
-     enums: String,
-     defaults: true,
-     oneofs: true
-    });
+console.log(modules.getLatestEpisodes(utils.feeds.SI, utils.qualities.FHD, '', ''));
