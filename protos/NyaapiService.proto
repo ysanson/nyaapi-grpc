@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package Nyaapi;
+
+service Nyaapi {
+    rpc GetLatestEpisodes(GetLatestEpisodesRequest) returns (stream GetLatestEpisodesResponse) {}
+}
+
+message GetLatestEpisodesRequest {
+    enum FEED {
+        SI = 0;
+        PANTSU = 1;
+    }
+    FEED feed = 1;
+    enum QUALITY {
+        SD = 0;
+        HD = 1;
+        FHD = 2;
+    }
+    QUALITY quality = 2;
+    string searchTerms = 3;
+    string fansub = 4;
+}
+
+
+message GetLatestEpisodesResponse {
+    int32 id = 1;
+    string name = 2;
+    string hash = 3;
+    string dateISO = 4;
+    string filesize = 5;
+    string category = 6;
+    string sub_category = 7;
+    string magnet = 8;
+    string torrent = 9;
+    int32 seeders = 10;
+    int32 leechers = 11;
+    int32 completed = 12;
+    string status = 13;
+}

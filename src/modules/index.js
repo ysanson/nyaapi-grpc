@@ -1,5 +1,5 @@
-import getLatestEpisodes from './latest';
+import getLatestEpisodesHandler from './latest';
 
 export default {
-    getLatestEpisodes,
+    getLatestEpisodesHandler,
 };
