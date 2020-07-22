@@ -63,6 +63,7 @@ function getLatestEpisodesHandler(call) {
         .then((episodes) => {
             episodes.forEach((episode) => call.write(episode));
             call.end();
+            console.log('It has returned');
         })
         .catch((error) => console.log(error));
 }

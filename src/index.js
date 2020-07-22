@@ -34,8 +34,14 @@ async function getServer() {
     return server;
 }
 
+/* const credentials = grpc.ServerCredentials.createSsl(
+    fs.readFileSync('./certs/ca.crt'), [{
+        cert_chain: fs.readFileSync('./certs/server.crt'),
+        private_key: fs.readFileSync('./certs/server.key'),
+    }], true); */
+
 getServer().then((server) => {
-    server.bind('172.26.179.58:50051', grpc.ServerCredentials.createInsecure());
+    server.bind('0.0.0.0:50051', grpc.ServerCredentials.createInsecure());
     server.start();
     console.log('The server has started!');
 }).catch((error) => console.log(error));

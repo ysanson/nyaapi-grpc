@@ -7,7 +7,8 @@
     "start": "node index.js",
     "build": "babel src -d lib",
     "dev": "npm run build && node lib/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gen:certs": "./src/scripts/generateCerts.sh"
   },
   "keywords": [
     "nyaapi",
